@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.javatraining.librarymanagementsystem.LibraryManagementSystemApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.894 s - in com.javatraining.librarymanagementsystem.LibraryManagementSystemApplicationTests
