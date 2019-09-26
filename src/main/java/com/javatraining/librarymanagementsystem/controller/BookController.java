@@ -45,4 +45,13 @@ public class BookController {
 		return booksManager.inserBookDetails(books);
 
 	}
+	
+	@RequestMapping(value = "/update/books",
+			produces = "application/json",
+			consumes = "application/json",
+			method = { RequestMethod.PUT })
+	public Books updateBookDetails(@RequestBody Books books) throws Exception {
+		return booksManager.updateBookDetails(books);
+
+	}
 }
