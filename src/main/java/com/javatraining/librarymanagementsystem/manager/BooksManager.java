@@ -50,4 +50,53 @@ public class BooksManager {
 
 	}
 
+	public String deleteBookDetails(Books books) throws Exception {
+
+		String output = null;
+		Optional<Books> bookDetails = null;
+		Books book = null;
+		bookDetails = booksDAO.findById(books.getBookId());
+
+		if (bookDetails != null) {
+			book = bookDetails.get();
+		} else {
+			throw new Exception(
+					"No book details are matching with the given Id");
+		}
+
+		if (book != null) {
+
+			output = "Book Details Deleted successfully.";
+			booksDAO.deleteById(book.getBookId());
+		}
+
+		return output;
+
+	}
+	
+	public String deleteBookDetailsById(int bookId) throws Exception {
+
+		String output = null;
+		Optional<Books> bookDetails = null;
+		Books book = null;
+		bookDetails = booksDAO.findById(bookId);
+
+		if (bookDetails != null) {
+			book = bookDetails.get();
+		} else {
+			throw new Exception(
+					"No book details are matching with the given Id");
+		}
+
+		if (book != null) {
+
+			output = "Book Details Deleted successfully.";
+			booksDAO.deleteById(book.getBookId());
+		}
+
+		return output;
+
+	}
+
+
 }
